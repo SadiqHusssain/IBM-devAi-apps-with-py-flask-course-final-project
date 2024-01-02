@@ -18,14 +18,12 @@ The course is part of 9 courses series in [IBM Backend Development Professional 
 #
 ### Tasks done:
 ```text
-Task 1: Clone the project repository
-Task 2: Create an emotion detection application using Watson NLP library
-Task 3: Format the output of the application
-Task 4: Package the application
-Task 5: Run Unit tests on your application
-Task 6: Deploy as web application using Flask
-Task 7: Incorporate Error handling
-Task 8: Run static code analysis
+1: Created an Emotion Detection application using the functions from embeddable AI libraries
+2: Extracted relevant information from the output received from the function
+3: Tested and packaged the application created using the Emotion Detection function
+4: Completed web deployment of the application using Flask
+5: Incorporated error handling in the application to account for invalid input to the application
+6: Written codes that are in perfect compliance with PEP8 guidelines, getting 10/10 score in static code analysis
 ```
 #
 <code>These are demo shots of how the application looks & works:</code>
