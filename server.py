@@ -20,7 +20,6 @@ def emotion_detect():
     dominant_emotion = result['dominant_emotion']
     if dominant_emotion is None:
         return "Invalid text! Please try again!"
-    # Creating the statement
     response = f"For the given statement, the system response is {emotions}.\
      The dominant emotion is {dominant_emotion}."
     return response
