@@ -9,8 +9,12 @@ def emotion_detector(text_to_analyse):
     raw_document= {"raw_document": {"text": text_to_analyse}}
     response = requests.post(url=URL, headers=headers, json=raw_document)
     formatted_response = json.loads(response.text)
+    status = response.status_code
+    if status == 400:
+        emotions = {'anger':None, 'sadness':None, 'fear':None, 'joy':None, 'disgust':None, 'dominant_emotion':None}
+        return emotions
+
     emotions =  formatted_response['emotionPredictions'][0]['emotion']
-    
     dominant_emotion = [None, -100.0] # to compare scores and get name of dominant emotion.
     for emotion in emotions:
         if emotions[emotion] > dominant_emotion[-1]:

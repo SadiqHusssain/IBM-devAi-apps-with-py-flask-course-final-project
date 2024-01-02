@@ -14,10 +14,13 @@ def emotionDetector():
     # Extracting emotions and their values
     emotions = ', '.join(f"'{emotion}': {value}" for emotion, value in result.items() if emotion != 'dominant_emotion')
     dominant_emotion = result['dominant_emotion']
+    if dominant_emotion is None:
+        return "Invalid text! Please try again!"
     # Creating the statement
     response = f"For the given statement, the system response is {emotions}. The dominant emotion is {dominant_emotion}."
     return response
 
 
+    
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
